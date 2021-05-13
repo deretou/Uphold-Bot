@@ -9,7 +9,7 @@ class Tricker  {
      * @returns {void} 
      */
     static RetrieverByPair(pair) {
-
+       console.log("Retrieve the rate every 5 seconds for a pair");
         let isItTheFirstCall = true;
         let firstBid = 0;
         setInterval(async ()=>{
@@ -66,14 +66,14 @@ class Tricker  {
 
     /**
      * Handle multiple currency pairs at the same time
-     * @param {object} arrayOfPairs 
-     * @param {object} fetchInterval in second
-     * @param {object} oscillation
+     * @param {Array} arrayOfPairs 
+     * @param {Integer} fetchInterval in second
+     * @param {Decimal} oscillation
      * @returns {void} 
      */
      static RetrieverByArrayOfCurrency(arrayOfPairs,fetchInterval,oscillation) {
-        
- console.log(arrayOfPairs);
+        console.log("Handle multiple currency pairs at the same time");
+        console.log(arrayOfPairs);
 
         if(Array.isArray(arrayOfPairs)){
 
