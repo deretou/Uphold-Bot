@@ -1,0 +1,30 @@
+{
+  "name": "uphold-bot",
+  "version": "1.0.0",
+  "description": "Use the Uphold API to create a bot that is able to alert you about price oscillations on a given currency pair.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deretou/Uphold-Bot.git"
+  },
+  "author": "Fode Toure",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deretou/Uphold-Bot/issues"
+  },
+  "homepage": "https://github.com/deretou/Uphold-Bot#readme",
+  "dependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "nodemon": "^2.0.7"
+  }
+}
