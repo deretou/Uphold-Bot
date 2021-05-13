@@ -6,7 +6,7 @@ Use the Uphold API to create a bot that is able to alert you about price oscilla
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
-git clone https://github.com/deretou/Uphold-Bot.git # or clone your own fork
+git clone https://github.com/deretou/Uphold-Bot.git 
 cd Uphold-Bot
 npm install
 npm start
