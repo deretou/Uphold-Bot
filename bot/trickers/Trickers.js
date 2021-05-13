@@ -22,11 +22,15 @@ class Tricker  {
             let res = await axios(config);
             
 
-            if(res.status == 200){                
+            if(res.status == 200){  
+
                 if(isItTheFirstCall){
+
                     firstBid = res.data.bid;
                     isItTheFirstCall =false;
+
                 }else{
+
                     const oscillation = res.data.bid - firstBid;
                     const checker = Math.abs(oscillation) > 0.01;
 
@@ -34,6 +38,7 @@ class Tricker  {
                         console.log("#########################################");
                         console.log("Oscillation ==> "+oscillation); 
                         console.log("#########################################");
+
                         if(oscillation > 0){                    
                             console.log("+++++++++++++++++++++++++++++++++++++++++");
                             console.log("First Bid ==> "+firstBid); 
@@ -47,26 +52,26 @@ class Tricker  {
                             console.log("Current Bid ==> "+res.data.bid);
                             console.log("Price goes down for the pair "+pair);            
                         }
+
                     }
                     
                      }
 
              }
                                         
-
         },5000);
         
     }
 
 
     /**
-     * Verify Token
+     * Handle multiple currency pairs at the same time
      * @param {object} arrayOfPairs 
-     * @param {object} res 
-     * @param {object} next
+     * @param {object} fetchInterval 
+     * @param {object} oscillation
      * @returns {void} 
      */
-     static RetrieverByArrayOfCurrency(pai) {
+     static RetrieverByArrayOfCurrency(arrayOfPairs,fetchInterval,oscillation) {
         
         let isItTheFirstCall = true;
         let firstBid = {};
